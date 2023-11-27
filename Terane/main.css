@@ -1,0 +1,171 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+   display: flex;
+   height: 100vh;
+   width: 100%;
+}
+
+.left{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 40%;
+   height: 100vh;
+}
+.right{
+   width: 60%;
+   height: 100vh;
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+.logo{
+   width: 163px;
+   height: 55.94px;
+   margin-top: 28px;
+   margin-left: 32px;
+   padding: 2px 1px 2px 1px;
+}
+nav{
+display: flex;
+list-style: none;
+}
+
+nav li a{
+   text-decoration: none;
+   margin-right: 10px;
+   color: #A0AEC0;
+}
+nav li a:hover{
+   color: #2D3748;
+}
+
+.login-title{
+   width: 640px;
+   height: 700px;
+   padding: 80px;
+}
+
+.login-form{
+   width: 480px;
+   height: 72px;
+}
+
+.asan-imza{
+   font-weight: 600;
+   font-size: 30px;
+   color: #A0AEC0;
+   margin-bottom: 40px;
+   line-height: 36px;
+}
+.black{
+   color: #2D3748;
+}
+.telephone{
+   margin-top: 10px;
+   width: 480px;
+   height: 40px;
+   padding: 10px;
+   font-size: 16px;
+   margin-bottom: 20px;
+   z-index: 1;
+}
+.country-code{
+   background-color: #EDF2F7;
+   height: 38px;
+   position: absolute;
+   top: 2px;
+   left: 1px;
+   margin-top: 15px;
+   padding: 10px;
+   border: none;
+   clear: both;
+   
+}
+.div-form{
+   position: relative;
+}
+label{
+   font-size: 16px;
+   float: left;
+   color: #2D3748;
+   line-height: 24px;
+   font-weight: 500;
+}
+
+
+.asan-id{
+   margin-top: 10px;
+   width: 480px;
+   height: 40px;
+   padding: 10px;
+}
+
+.davam-et{
+   margin-top: 20px;
+   width: 480px;
+   height: 48px;
+   color: white;
+   font-weight: bold;
+   background-color:  #E2E8F0;
+   font-size: 18px;
+   border: none;
+   border-radius: 6px;
+   margin-bottom: 20px;
+  
+}
+
+.or{
+   text-align: center;
+   padding-top: 8px;
+   color: #4A5568;
+   line-height: 24px;
+   font-weight: 400;
+   font-size: 16px;
+}
+.sign{
+   height: 40px;
+   width: 480px;
+   margin-top: 20px;
+   background-color: white;
+   border-color: #E2E8F0;
+   border-width: 1px;
+   border-style: solid;
+   color: #1A202C;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 28px;
+   
+}
+.group{
+   width: 80px;
+   height: 30px;
+   margin-left: 80px;
+   float: left;
+}
+footer{
+   height: 80px;
+   bottom: 0;
+   justify-content: space-between;
+   width: 640px;
+}
+.ib{
+   float: right;
+   color: #718096;
+   font-weight: 400;
+   height: 20px;
+  
+   font-size: 14px;
+   margin-right: 85px;
+   
+}

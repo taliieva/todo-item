@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const friends = ['Michael', 'Steven', 'Peter'];
+        console.log(friends);
+
+        //const years = new Array(1991,1984,2001,2023);
+        console.log(friends[0]);
+
+        console.log(friends.length);
+        console.log(friends[friends.length - 1]);
+
+        friends[2] = 'Jay';
+        console.log(friends);
+
+        const firstname = 'Terane';
+        const jonas = [firstname, 'Aliyeva', 2023-2001, 'developer',friends];
+        console.log(jonas);
+
+        //exercise
+        function calcAge(birthYear){
+            return 2023 - birthYear;
+        }
+        const years = [1990, 1967, 2002, 2010, 2018];
+        const age1 = calcAge(years[0]);
+        //add elements
+        const friend = ['Michael', 'Steven', 'Peter'];
+        friend.push('Jay');
+        console.log(friend);
+
+        friend.unshift('John');
+        console.log(friend);
+        //remove elements
+        friend.pop(); //last element
+        const popped = friend.pop(); // deyeri ozunde saxlayir
+        console.log(popped);
+        console.log(friend);
+        friend.shift(); //first
+        console.log(friend);
+
+        console.log(friend.indexOf('Steven'));
+        console.log(friend.indexOf('Bob'));
+
+        console.log(friend.includes('Steven'));
+        console.log(friend.includes('Bob'));
+    </script>
+</body>
+</html>

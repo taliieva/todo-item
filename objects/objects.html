@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Animal {
+        constructor(typeofAnimal) {
+          this.type = typeofAnimal;
+        }
+
+        eat() {
+          if (this.type === "domestic") {
+            console.log("the animal eats grass");
+          } else {
+            console.log("the animal eats meat");
+          }
+        }
+      }
+
+      class Hen extends Animal {
+        constructor() {
+          super("domestic");
+        }
+        makeSound() {
+          console.log("sjds");
+        }
+      }
+      class Wolf extends Animal {
+        constructor() {
+          super("wild");
+        }
+        makeSound() {
+          console.log("uyulduyur");
+        }
+      }
+      const wolf = new Wolf();
+      wolf.eat();
+      wolf.makeSound();
+
+      const hen = new Hen();
+      hen.eat();
+      hen.makeSound();
+      /*const wolf = new Animal("wild");
+        console.log(wolf);
+        wolf.eat();*/
+
+      var foo = { bar: "pony", baz: 3 };
+      var { bar: a, baz: b } = foo;
+      console.log(a);
+      // 'pony'
+      console.log(b);
+      // 3
+      
+      var mixed = {one:1, two: 2,values:[3,4,5]};
+      var{one:a, two:b, values:[c, , e]} = mixed;
+      console.log(a,b,c,e);
+
+
+      function mixed () {
+         return {
+             one: 1, two: 2, values: [3, 4, 5]
+              };
+        }
+        var {one: a, two: b, values: [c, , e]} = mixed();
+
+
+        var {
+  prop1: x,
+  prop2: {
+    prop3: {
+      nested: [ , , y]
+    }
+  }
+} = {prop: "Hello", prop2: {prop3: {nested: ["a", "b", "c"]}}};
+console.log(y);
+    </script>
+  </head>
+  <body></body>
+</html>

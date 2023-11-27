@@ -1,0 +1,48 @@
+/* Apply a CSS reset to remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define the grid layout for the form */
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns, one for labels and one for inputs */
+    gap: 10px; /* Gap between grid items */
+    max-width: 400px; /* Optional: Set a maximum width for the form */
+    margin: 0 auto; /* Optional: Center the form horizontally */
+}
+
+/* Style the form elements */
+label {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Optional: Style the form when focused */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}

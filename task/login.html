@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Login page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/login.png" type="images/x-icon">
+</head>
+<body id="loginhtml">
+    <h2 class="login">Login</h2>
+    <form action="/userinfo" method="post" class="login_form">
+        <label for="mail">Email:</label>
+        <br>
+        <input required type="email" name="" id="mail" placeholder="email@email.com" class="login_mail">
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <br>
+        <input required type="password" id="password" placeholder="min. 8 character" class="login_password">
+        <br>
+        <input type="checkbox" id="checkbox" class="login_checkbox">
+        <label for="checkbox">Remember me!</label>
+        <a href="password.html" class="forgot" target="_blank">Forgot password?</a>
+        <br>
+        <input type="submit" value="Submit" class="login_submit">
+    </form>
+    <p class="signup">Don`t have an account? <a href="signup.html" target="_blank">Sign up!</a></p>
+    <p class="login_contact">Have any problem? <a href="contact.html">Contact us!</a></p>
+  
+</body>
+</html>

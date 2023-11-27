@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*function sayHello(){
+            let msg = "hello world";
+            return msg;
+        }
+        let hello = sayHello();
+        console.log(hello);*/
+        function multiply(num1, num2){
+            return num1*num2
+        }
+        let total = multiply(5,2)
+        console.log('Cem',total);
+
+        function sumArrayValues(array){
+            let total = 0;
+            for(let i = 0;i < array.length; i++){
+                total += array[i];
+            }
+            return total;
+        }
+        let array = [2, 4, 6, 8, 10];
+        console.log('Cem',sumArrayValues(array));
+
+        const sayHello = function(name){
+            return `Hello ${name}`;
+        }
+        console.log(sayHello("Tarana"));
+        
+
+        (function(){
+            console.log('he yo!')
+        })()
+
+        let sayHello2 = (function(name){
+            console.log(`Hello ${name}`)
+        })("Tarana");
+
+
+        const incrementalSum = function(firstNumber){
+            const newNum = firstNumber + 1;
+            function inner(secondNum){
+                return newNum + secondNum;
+            }
+            return inner;
+        }
+        const firstFunc = incrementalSum(2);
+        console.log(firstFunc(3));
+
+
+
+
+        function test(age){
+            if(age>18){
+                let type = "adult";
+            }
+            console.log(type);
+        }
+        test(19);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

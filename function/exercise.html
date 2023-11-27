@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //exercise 1
+        function fullName(){
+            let name = "Tarana Aliyeva";
+            return name;
+        }
+        console.log(fullName());
+        //exercise 2
+        function fullName2(firstName, lastName){
+            let full_name = firstName + lastName;
+            return full_name;
+
+        }
+        console.log(fullName2("Tarana ", "Aliyeva"));
+        //exercise 3
+        function addNumbers(num1, num2){
+            return num1 + num2;
+        }
+        console.log(addNumbers(5,10));
+        //exercise 4
+        function areaOfRectangle(a, b){
+            return a*b;
+        }
+        console.log(areaOfRectangle(2,5));
+        //exercise 5
+        function perimeterOfRectangle(a,b){
+            return 2*(a+b);
+        }
+        console.log(perimeterOfRectangle(5,2));
+        //exercise 6
+        function volumeOfRectPrism(a,b,c){
+            return a*b*c;
+        }
+        console.log(volumeOfRectPrism(2,5,4))
+        //exercise 14
+        function checkSeason(a){
+            if(a >= 3 && a <= 5){
+                return "spring";
+            }
+            else if(a >= 6 && a <= 8){
+                return "summer";
+            }
+            else if(a >= 9 && a <= 11){
+                return "autumn";
+            }
+            else if(a >= 11 && a <= 2){
+                return "winter";
+            }
+        }
+        console.log(checkSeason(6));
+        //exercise 15
+        function findMax(a,b,c){
+            if(a > b && a > c){
+                console.log(a);
+            }
+            else if(b > a && b > c){
+                console.log(b);
+            }
+            else if(c > a && c > b){
+                console.log(c);
+            }
+        } 
+        console.log(findMax(0, 10,5));
+        console.log(findMax(0, -10, -2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

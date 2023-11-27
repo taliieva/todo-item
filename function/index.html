@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var beer_cost = 6.25;
+        var burger_cost = 4.75;
+        var pop_cost = 3.00;
+
+        var account_balance = 15.75;
+
+        function check_balance(amt){
+            if(account_balance - amt > 0){
+                return true;
+            }
+            else{
+                console.log("insufficient money");
+                return false;
+            }
+        }
+
+        function drink_beer(){
+            if(check_balance(beer_cost)){
+                account_balance = account_balance - beer_cost;
+                console.log("Enjoy your beer");
+            }
+    
+            console.log("\tbalance: ",account_balance.toFixed(2));
+        }
+        function eat_burger(){
+            if(check_balance(beer_cost)){
+            account_balance = account_balance - burger_cost;
+            console.log("Enjoy your burger");
+            }
+            console.log("\tbalance: ",account_balance.toFixed(2));
+        }
+        function drink_pop(){
+            if(check_balance(beer_cost)){
+            account_balance = account_balance - pop_cost;
+            console.log("Enjoy your pop");
+            }
+            console.log("\tbalance: ",account_balance.toFixed(2));
+        }
+
+        var mealList = [drink_beer, drink_pop, eat_burger, drink_beer, eat_burger, drink_beer];
+        function visitCarnival(mList, msg){
+            for(var i = 0; i < mList.length; i++){
+                mList[i]();
+                //mList[i].call()
+            }
+        }
+        visitCarnival(mealList,"Hello");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

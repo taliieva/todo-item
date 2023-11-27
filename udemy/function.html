@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //function declaration
+        function calcAge1(birthYear){
+            const age = 2023 - birthYear;
+            return age;
+        }
+        const age1 = calcAge1(2001);
+        console.log(age1);
+ 
+        //function expression
+        const calcAge2 = function(birthYear){
+            return 2023 - birthYear;
+        } 
+        const age2 = calcAge2(2001);
+        console.log(age1, age2);
+ 
+        //arrow function
+        const calcAge3 = birthYear => 2023 - birthYear;
+        const age3 = calcAge3(2001);
+        console.log(age3);
+
+
+        const yearsUntilRetirement = (birthYear, firstname) =>{
+            const age = 2023 - birthYear;
+            const retirement = 65 - age;
+            //return retirement;
+            return `${firstname} retires in ${retirement} years`;
+        }
+        console.log(yearsUntilRetirement(2001, "Terane"));
+
+
+         //task
+         const calcAverage = (score1, score2, score3) =>{
+            const averageScore = (score1 + score2 + score3) / 3;
+            return averageScore;
+         }
+
+         const scoreDolphins = calcAverage(85,54,41);
+         const scoreKoalas = calcAverage(23,34,27);
+
+         function checkWinner(avgDolphins, avgKoalas){
+            if(scoreDolphins*2 <= scoreKoalas){
+                console.log(`Koalas win (${scoreKoalas} vs ${scoreDolphins})`)
+            }
+            else if(scoreDolphins >= scoreKoalas*2){
+                console.log(`Dolphins win (${scoreDolphins} vs ${scoreKoalas})`)
+            }
+            else{console.log("No teams winner...")}
+         }
+        checkWinner(scoreDolphins,scoreKoalas);
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

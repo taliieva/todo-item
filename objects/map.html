@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const gameEvents = new Map([
+            [17, 'Goal'],
+            [36,'Substitution'],
+            [47,'Goal'],
+            [61,'Substitution'],
+            [64,'yellow card'],
+            [69,'red card'],
+            [70,'Substitution'],
+            [72,'Substitution'],
+            [76,'Goal'],
+            [80,'Goal'],
+            [92,'yellow card'],
+        ]);
+
+        //exercise 1
+       
+        const events = [...new Set(gameEvents.values())];
+        console.log(events);
+        //exercise 2
+        gameEvents.delete(64);
+
+        //eercise 3
+        
+        const time = [...gameEvents.keys()].pop();
+        console.log(time);
+        console.log(`an event happened on avarage every ${time/gameEvents.size} minutes`);
+
+        //exercise 4
+        for(const [min,event] of gameEvents){
+            const half = min <= 45 ? 'first' : 'second';
+            console.log(`${half} [Half] ${min}: ${event}`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

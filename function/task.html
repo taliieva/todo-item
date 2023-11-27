@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var calPoints = function (operations) {
+        let newArr = [];
+        for (let i = 0; i < operations.length; i++) {
+          if (
+            operations[i] != "C" &&
+            operations[i] != "D" &&
+            operations[i] != "+"
+          ) {
+            let value = parseInt(operations[i]);
+            newArr.push(value);
+          }
+          if (operations[i] == "C") {
+            newArr.pop();
+          } else if (operations[i] === "D") {
+            let value = newArr[newArr.length - 1] * 2;
+            newArr.push(value);
+          } else if (operations[i] === "+") {
+            let newValue =
+              newArr[newArr.length - 1] + newArr[newArr.length - 2];
+            newArr.push(newValue);
+          }
+        }
+        let total = newArr.reduce((acc, curr) => {
+          return (acc += curr);
+        }, 0);
+        return total;
+      };
+
+
+
+      
+      var calPoints = function (operations) {
+        let arr = [];
+        operations.reverse();
+        while (operations.length) {
+          let curr = operations.pop();
+          if (curr == "C") arr.pop();
+          if (curr == "D") {
+            let num = 2 * arr[arr.length - 1];
+            arr.push(num * 1);
+          }
+          if (curr == "+") {
+            let num = arr[arr.length - 2] + arr[arr.length - 1];
+            arr.push(num * 1);
+          }
+          if (curr !== "+" && curr !== "D" && curr !== "C") {
+            arr.push(curr * 1);
+          }
+        }
+        let sum = 0;
+        console.log(arr);
+        arr.forEach((el) => {
+          sum += el;
+        });
+        return sum;
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

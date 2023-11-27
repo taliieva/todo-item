@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click me</button>
+    <script>
+      /*
+      let count = 0;
+      const btn = document.querySelector("button");
+      const unSub = () => {
+        if (count >= 1) {
+          btn.removeEventListener("click", handler)
+        }
+      };
+      
+      const handler = () => {
+        alert("salam");
+        count++;
+        unSub();
+      };
+      btn.addEventListener("click", handler);
+*/
+      function example(){
+        for(var i = 0; i<5;i++){
+          console.log("var" + i);
+        }
+        for(let i = 0; i<5;i++){
+          console.log("var" + i);
+        }
+        for(const i = 0; i<5;i++){
+          console.log("var" + i);
+        }
+      }
+    </script>
+  </body>
+</html>

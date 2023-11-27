@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const ordersSet = new Set([
+        "pasta",
+        "pizza",
+        "pizza",
+        "risotto",
+        "pasta",
+        "pizza",
+      ]);
+      console.log(ordersSet);
+      console.log(new Set("Jonas"));
+      console.log(ordersSet.size);
+      console.log(ordersSet.has("pizza"));
+      ordersSet.add("garlic bread");
+      ordersSet.delete("risotto");
+
+      for (const order of ordersSet) console.log(order);
+
+      const rest = new Map();
+      rest.set("name", "classico italy");
+      rest.set(1, "firenze");
+      console.log(rest.set(2, "lisbon"));
+
+      rest
+        .set("categories", ["italian", "pizzeria", "vegeterian"])
+        .set("open", 11)
+        .set("close", 23)
+        .set(true, "we are open")
+        .set(false, "we are closed");
+        console.log(rest.get('name'));
+        console.log(rest.get(true));
+
+        const time = 21;
+        console.log( rest.get(time > rest.get('open') && time < rest.get('close')));
+
+
+
+
+        const question = new Map([
+          ['question','what is programming language?'],
+          [1,'c'],
+          [2,'java'],
+          [3, 'javascript'],
+          ['correct',3],
+          [true,'correct'],
+          [false,'wrong'],
+    ])
+        console.log(question);
+/*
+        console.log(Object.entries(openingHours));
+        const hoursMap = new Map(Object.entries(openingHours));
+        console.log(hoursMap);*/
+      console.log(question.get('question'));
+      for(const [key,value] of question){
+        if(typeof key === 'number') console.log(`Answer ${key}:${value}`)
+      }
+    const answer = Number(prompt('your answer'));
+    console.log(answer);
+
+    console.log(question.get(question.get('correct') === answer));
+</script>
+  </head>
+  <body></body>
+</html>

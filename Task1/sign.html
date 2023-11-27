@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <style>
+      .welcome {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      form {
+        text-align: center;
+      }
+      .password {
+        margin-top: 10px;
+      }
+      .username {
+        margin-top: 10px;
+      }
+      .sign {
+        margin-top: 10px;
+        height: 40px;
+        width: 230px;
+        background-color: rgb(35, 206, 35);
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+      }
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="welcome">Welcome, please sign up!</p>
+    <form action="/userinfo" method="post">
+      <label for="Email">Email</label>
+      <input type="email" placeholder="Email" id="Email" class="email" />
+      <br />
+      <label for="username">Username</label>
+      <input
+        type="text"
+        placeholder="Username"
+        id="username"
+        class="username"
+      />
+      <br />
+      <label for="Password">Password</label>
+      <input
+        type="password"
+        id="Password"
+        placeholder="password"
+        class="password"
+      />
+      <br />
+      <input type="submit" value="Sign up" class="sign" />
+    </form>
+    <div>
+      <p>Do you have account?</p>
+      <a href="login.html" target="_blank">Login</a>
+    </div>
+  </body>
+</html>

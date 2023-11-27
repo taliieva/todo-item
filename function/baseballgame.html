@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var calPoints = function (operations) {
+        const baseball_points = []; 
+        for (var i = 0; i < operations.length; i++) {
+          if (
+            operations[i] !== "C" &&
+            operations[i] !== "D" &&
+            operations[i] !== "+"
+          ) {
+            baseball_points.push(parseInt(operations[i]));
+          } else if (operations[i] === "C") {
+            baseball_points.pop();
+          } else if (operations[i] === "D") {
+            let value = baseball_points[baseball_points.length - 1] * 2;
+            baseball_points.push(value);
+          } else if (operations[i] === "+") {
+            let plus =
+              baseball_points[baseball_points.length - 1] + baseball_points[baseball_points.length - 2];
+            baseball_points.push(plus);
+          }
+        }
+        var points = baseball_points.reduce(
+          (accumlator, current_value) => (accumlator += current_value),
+          0
+        );
+
+        console.log(points);
+      };
+
+      calPoints(["5","-2","4","C","D","9","+","+"]);
+    </script>
+  </head>
+  <body></body>
+</html>

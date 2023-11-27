@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" value="">
+        <button>ADD</button>
+        
+    </div>
+    <ul>
+
+    </ul>
+    <script>
+         const btn = document.querySelector("button");
+         const input = document.querySelector("input");
+         const list = document.querySelector("ul");
+         function addTodoItem(){
+            if(!input.value.trim().length){
+                alert("input is empty");
+                return;
+            }
+            const li = document.createElement("li");
+            li.innerText = input.value;
+            list.append(li);
+            input.value = "";
+
+            const dltBtn = document.createElement("button");
+            dltBtn.innerText="Delete";
+            dltBtn.style.color = "red";
+            dltBtn.addEventListener("click",()=>{
+                li.remove();
+            });
+            li.append(dltBtn)
+            li.addEventListener("click",()=>{
+                li.classList.toggle("done");
+            })
+         }
+
+         input.addEventListener("keyup",(event)=>{
+            if(event.key === "Enter"){
+                addTodoItem();
+            }
+         })
+         btn.addEventListener("click",addTodoItem);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sign up page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/signup.png" type="image/x-icon">
+</head>
+<body id="signhtml">
+    <h2 class="new_account">Create new account</h2>
+    <form action="/userinfo" method="post" class="sign_form">
+        <label for="username">Username</label>
+        <br>
+        <input required type="text" placeholder="username" class="sign_username" id="username">
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input required type="email" placeholder="mail@mail.com" class="sign_mail" id="email">
+        <br>
+        <p>Choose you gender:</p>
+        <input required type="radio" class="female" id="female" name="gender">
+        <label for="female">Female</label>
+        <input required type="radio" class="male" id="male" name="gender">
+        <label for="male">Male</label>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input required type="password" placeholder="min. 8 character" class="sign_password" id="password">
+        <br>
+        <label for="confirm">Confirm Password</label>
+        <br>
+        <input required type="password" name="" id="confirm" class="sign_confirm" placeholder="min. 8 character">
+        <br>
+        <input type="submit" name="Sign up" id="sign_button" class="sign_button">
+    </form>
+    <p class="login_page">Already have an account? <a href="login.html">Login</a></p>
+    <p class="sign_contact">Have any problem? <a href="contact.html">Contact us!</a></p>
+</body>
+</html>

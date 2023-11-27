@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login form</title>
+    <style>
+      div {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        text-align: right;
+      }
+      #password {
+        margin-top: 10px;
+      }
+      .welcome {
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+      }
+      .submit {
+        background-color: rgb(46, 156, 224);
+        margin-top: 20px;
+        height: 40px;
+        width: 230px;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        border: none;
+      }
+      .remember {
+        left: 50%;
+      }
+      footer {
+        text-align: right;
+        font-size: 20px;
+        font-style: italic;
+        margin-right: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/login.jpg" alt="" />
+    <div>
+      <p class="welcome">Welcome!</p>
+      <form action="/userinfo" method="post">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Username" />
+        <br />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" />
+        <br />
+        <input class="submit" type="submit" value="Login" />
+        <p>Don`t have an account?</p>
+        <a href="sign.html" target="_blank">Sign Up</a>
+      </form>
+    </div>
+    <footer>
+      Do you have any problem? Please
+      <a href="contact.html" target="_blank">contact</a> us!
+    </footer>
+  </body>
+</html>
